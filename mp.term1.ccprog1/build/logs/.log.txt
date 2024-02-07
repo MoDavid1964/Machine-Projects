@@ -1,0 +1,21 @@
+<formatted>
+( 0) [-Wincompatible-pointer-types]     src\game/game.manager.min.h:813:41        passing argument 2 of 'UtilsKey_inputPoll' from incompatible pointer type 
+( 1) [-Wincompatible-pointer-types]     src\game/game.manager.min.h:813:55        passing argument 3 of 'UtilsKey_inputPoll' from incompatible pointer type 
+( 2) [-Wincompatible-pointer-types]     src\game/game.manager.h:1038:45           passing argument 2 of 'UtilsKey_inputPoll' from incompatible pointer type 
+( 3) [-Wincompatible-pointer-types]     src\game/game.manager.h:1038:58           passing argument 3 of 'UtilsKey_inputPoll' from incompatible pointer type 
+( 4) [-Wincompatible-pointer-types]     src\game/game.manager.h:1053:26           passing argument 1 of 'UtilsKey_inputString' from incompatible pointer type 
+( 5) [-Wincompatible-pointer-types]     src\game/game.manager.h:1053:45           passing argument 2 of 'UtilsKey_inputString' from incompatible pointer type 
+( 6) [-Wincompatible-pointer-types]     src\game/game.manager.h:1056:7            passing argument 2 of 'UtilsKey_inputPoll' from incompatible pointer type 
+( 7) [-Wincompatible-pointer-types]     src\game/game.manager.h:1057:7            passing argument 3 of 'UtilsKey_inputPoll' from incompatible pointer type 
+( 8) [-Wincompatible-pointer-types]     src\game/game.manager.h:1065:11           passing argument 2 of 'UtilsKey_inputPoll' from incompatible pointer type 
+( 9) [-Wincompatible-pointer-types]     src\game/game.manager.h:1066:11           passing argument 3 of 'UtilsKey_inputPoll' from incompatible pointer type 
+(10) [-Wincompatible-pointer-types]     src\game/game.manager.h:1078:11           passing argument 2 of 'UtilsKey_inputPoll' from incompatible pointer type 
+(11) [-Wincompatible-pointer-types]     src\game/game.manager.h:1079:11           passing argument 3 of 'UtilsKey_inputPoll' from incompatible pointer type 
+(12) [-Wincompatible-pointer-types]     src\game/game.manager.h:1086:11           passing argument 2 of 'UtilsKey_inputPoll' from incompatible pointer type 
+(13) [-Wincompatible-pointer-types]     src\game/game.manager.h:1087:11           passing argument 3 of 'UtilsKey_inputPoll' from incompatible pointer type 
+(14) [-Wincompatible-pointer-types]     src\game/game.manager.h:1106:5            passing argument 2 of 'UtilsKey_inputPoll' from incompatible pointer type 
+(15) [-Wincompatible-pointer-types]     src\game/game.manager.h:1107:5            passing argument 3 of 'UtilsKey_inputPoll' from incompatible pointer type 
+(16) [-Wincompatible-pointer-types]     src\game/game.manager.h:1122:5            passing argument 2 of 'UtilsKey_inputPoll' from incompatible pointer type 
+(17) [-Wincompatible-pointer-types]     src\game/game.manager.h:1123:5            passing argument 3 of 'UtilsKey_inputPoll' from incompatible pointer type 
+(18) [-Wincompatible-pointer-types]     src\game/game.manager.h:1138:5            passing argument 2 of 'UtilsKey_inputPoll' from incompatible pointer type 
+(19) [-Wincompatible-pointer-types]     src\game/game.manager.h:1139:5            passing argument 3 of 'UtilsKey_inputPoll' from incompatible pointer type 

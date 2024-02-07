@@ -1,0 +1,296 @@
+| game.c | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| int main(int argc, char *argv[])  | 1 |  |  |  |
+
+| game.assets.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| void GameAssets_init(struct GameAssets *this)  | 1 |  |  |  |
+
+| game.catalogue.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| void GameCatalogue_init(struct GameCatalogue *this)  | 1 |  |  |  |
+
+| game.manager.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| void Game_init(struct Game *this, struct GameAssets *pAssets, struct GameCatalogue *pCatalogue)  | 1 |  |  |  |
+| int Game_isDialogueDone(struct Game *this)  | 2 |  |  |  |
+| void Game_makeHeader(struct Game *this)  | 3 |  |  |  |
+| void Game_killHeader(struct Game *this)  | 4 |  |  |  |
+| void Game_makeFooter(struct Game *this)  | 5 |  |  |  |
+| void Game_killFooter(struct Game *this)  | 6 |  |  |  |
+| void Game_menuUI(char cInput, struct Game *this)  | 7 |  |  |  |
+| void Game_playStartUI(char *sInput, struct Game *this)  | 8 |  |  |  |
+| void Game_playUI(char cInput, struct Game *this)  | 9 |  |  |  |
+| void Game_guideUI(char cInput, struct Game *this)  | 10 |  |  |  |
+| void Game_controlsUI(char cInput, struct Game *this)  | 11 |  |  |  |
+| void Game_authorUI(char cInput, struct Game *this)  | 12 |  |  |  |
+| void Game_dialogUI(char cInput, struct Game *this)  | 13 |  |  |  |
+| void Game_menuIO(char cInput, struct Game *this)  | 14 |  |  |  |
+| void Game_playStartIO(char *sInput, struct Game *this)  | 15 |  |  |  |
+| void Game_playIO(char cInput, struct Game *this)  | 16 |  |  |  |
+| void Game_guideIO(char cInput, struct Game *this)  | 17 |  |  |  |
+| void Game_controlsIO(char cInput, struct Game *this)  | 18 |  |  |  |
+| void Game_authorIO(char cInput, struct Game *this)  | 19 |  |  |  |
+| void Game_dialogIO(char cInput, struct Game *this)  | 20 |  |  |  |
+| void Game_playHome(struct Game *this)  | 21 |  |  |  |
+| void Game_playFarm(struct Game *this)  | 22 |  |  |  |
+| void Game_playShop(struct Game *this)  | 23 |  |  |  |
+| void Game_menu(struct Game *this)  | 24 |  |  |  |
+| void Game_play(struct Game *this)  | 25 |  |  |  |
+| void Game_guide(struct Game *this)  | 26 |  |  |  |
+| void Game_controls(struct Game *this)  | 27 |  |  |  |
+| void Game_author(struct Game *this)  | 28 |  |  |  |
+| void Game_consoleWarning(struct Game *this)  | 29 |  |  |  |
+| void Game_conf(struct Game *this, char *sMode, char *sScene)  | 30 |  |  |  |
+| void Game_execFull(struct Game *this)  | 31 |  |  |  |
+| void Game_execMini(struct Game *this)  | 32 |  |  |  |
+| void Game_exec(struct Game *this)  | 33 |  |  |  |
+
+| game.manager.min.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| void GameMini_init(struct GameMini *this, struct GameCatalogue *pCatalogue)  | 1 |  |  |  |
+| void GameMini_makeFooter(struct GameMini *this)  | 2 |  |  |  |
+| void GameMini_cropSelection(struct GameMini *this)  | 3 |  |  |  |
+| void GameMini_UI(char cInput, struct GameMini *this)  | 4 |  |  |  |
+| void GameMini_IO(char cInput, struct GameMini *this)  | 5 |  |  |  |
+| void GameMini_maintainConsoleSize()  | 6 |  |  |  |
+| void GameMini_exec(struct GameMini *this)  | 7 |  |  |  |
+
+| game.class.plot.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| struct Plot *Plot_new()  | 1 |  |  |  |
+| void Plot_kill(struct Plot *this)  | 2 |  |  |  |
+| void Plot_init(struct Plot *this)  | 3 |  |  |  |
+| struct Plot *Plot_create()  | 4 |  |  |  |
+| enum PlotState Plot_getState(struct Plot *this)  | 5 |  |  |  |
+| char *Plot_getProductName(struct Plot *this)  | 6 |  |  |  |
+| char *Plot_getProductCode(struct Plot *this)  | 7 |  |  |  |
+| enum ProductType Plot_getProductType(struct Plot *this)  | 8 |  |  |  |
+| int Plot_getProductState(struct Plot *this)  | 9 |  |  |  |
+| int Plot_getProductWaterAmt(struct Plot *this)  | 10 |  |  |  |
+| int Plot_getProductWaterReq(struct Plot *this)  | 11 |  |  |  |
+| int Plot_getProductLastWatered(struct Plot *this)  | 12 |  |  |  |
+| int Plot_till(struct Plot *this)  | 13 |  |  |  |
+| int Plot_sow(struct Plot *this, struct Product *pProduct)  | 14 |  |  |  |
+| int Plot_water(struct Plot *this, int dTime)  | 15 |  |  |  |
+| int Plot_harvest(struct Plot *this)  | 16 |  |  |  |
+
+| game.class.product.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| struct Product *Product_new()  | 1 |  |  |  |
+| void Product_kill(struct Product *this)  | 2 |  |  |  |
+| void Product_init(struct Product *this, enum ProductType eType, char cProductCode, char *sProductName, int dCostToBuy, int dCostToSell, int dWaterReq, int dWaterAmt, int dTimePlanted)  | 3 |  |  |  |
+| struct Product *Product_create(enum ProductType eType, struct GameCatalogue* pCatalogue, int dTimePlanted)  | 4 |  |  |  |
+| int Product_getState(struct Product *this)  | 5 |  |  |  |
+| enum ProductType Product_getType(struct Product *this)  | 6 |  |  |  |
+| int Product_getWaterAmt(struct Product *this)  | 7 |  |  |  |
+| int Product_getWaterReq(struct Product *this)  | 8 |  |  |  |
+| char *Product_getCode(struct Product *this)  | 9 |  |  |  |
+| char *Product_getName(struct Product *this)  | 10 |  |  |  |
+| int Product_getLastWatered(struct Product *this)  | 11 |  |  |  |
+| int Product_water(struct Product *this, int dTime)  | 12 |  |  |  |
+
+| game.class.stock.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| struct Stock *Stock_new()  | 1 |  |  |  |
+| void Stock_kill(struct Stock *this)  | 2 |  |  |  |
+| void Stock_init(struct Stock *this, enum ProductType eProductType, int dCostToBuy, int dCostToSell, int dAmount)  | 3 |  |  |  |
+| struct Stock *Stock_create(enum ProductType eProductType, struct GameCatalogue *pCatalogue, int dAmount)  | 4 |  |  |  |
+| int Stock_getAmount(struct Stock *this)  | 5 |  |  |  |
+| int Stock_updateAmount(struct Stock *this, int dAmountChange)  | 6 |  |  |  |
+| int Stock_getBuyPrice(struct Stock *this, int dAmount)  | 7 |  |  |  |
+| int Stock_buyAmount(struct Stock *this, int dAmountChange)  | 8 |  |  |  |
+| int Stock_getSellPrice(struct Stock *this, int dAmount)  | 9 |  |  |  |
+| int Stock_sellAmount(struct Stock *this, int dAmountChange)  | 10 |  |  |  |
+
+| game.enum.farm.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+
+| game.enum.shop.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+
+| game.enum.state.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+
+| game.obj.farm.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| struct Farm *Farm_new()  | 1 |  |  |  |
+| void Farm_init(struct Farm *this, int dWidth, int dHeight, struct GameCatalogue *pCatalogue)  | 2 |  |  |  |
+| struct Farm *Farm_create(int dWidth, int dHeight, struct GameCatalogue *pCatalogue)  | 3 |  |  |  |
+| void Farm_kill(struct Farm *this)  | 4 |  |  |  |
+| int Farm_getSelectorX(struct Farm *this)  | 5 |  |  |  |
+| int Farm_getSelectorY(struct Farm *this)  | 6 |  |  |  |
+| struct Plot *Farm_getCurrentPlot(struct Farm *this)  | 7 |  |  |  |
+| int Farm_getCurrentQueueStatus(struct Farm *this)  | 8 |  |  |  |
+| enum FarmAction Farm_getCurrentAction(struct Farm *this)  | 9 |  |  |  |
+| void Farm_setCurrentAction(struct Farm *this, enum FarmAction eFarmAction)  | 10 |  |  |  |
+| enum ProductType Farm_getCurrentCrop(struct Farm *this)  | 11 |  |  |  |
+| void Farm_setCurrentCrop(struct Farm *this, enum ProductType eProductType)  | 12 |  |  |  |
+| int Farm_canTill(struct Farm *this)  | 13 |  |  |  |
+| int Farm_canSow(struct Farm *this)  | 14 |  |  |  |
+| int Farm_canWater(struct Farm *this, int dTime)  | 15 |  |  |  |
+| int Farm_canWaterCrop(struct Farm *this, int dTime)  | 16 |  |  |  |
+| int Farm_canHarvest(struct Farm *this)  | 17 |  |  |  |
+| int Farm_canHarvestCrop(struct Farm *this)  | 18 |  |  |  |
+| void Farm_till(struct Farm *this, int dPlots)  | 19 |  |  |  |
+| void Farm_sow(struct Farm *this, int dPlots, struct GameCatalogue *pCatalogue, int dTime)  | 20 |  |  |  |
+| void Farm_water(struct Farm *this, int dTime)  | 21 |  |  |  |
+| void Farm_harvest(struct Farm *this)  | 22 |  |  |  |
+| void Farm_startSelecting(struct Farm *this)  | 23 |  |  |  |
+| void Farm_stopSelecting(struct Farm *this)  | 24 |  |  |  |
+| void Farm_incrementX(struct Farm *this)  | 25 |  |  |  |
+| void Farm_decrementX(struct Farm *this)  | 26 |  |  |  |
+| void Farm_incrementY(struct Farm *this)  | 27 |  |  |  |
+| void Farm_decrementY(struct Farm *this)  | 28 |  |  |  |
+| int Farm_getQueueLength(struct Farm* this)  | 29 |  |  |  |
+| void Farm_queueSelected(struct Farm *this, int dTime)  | 30 |  |  |  |
+| void Farm_unqueueSelected(struct Farm *this)  | 31 |  |  |  |
+| void Farm_toggleSelected(struct Farm *this, int dTime)  | 32 |  |  |  |
+| void Farm_clearQueue(struct Farm *this)  | 33 |  |  |  |
+| int Farm_processQueue(struct Farm *this, struct Player *pPlayer, struct GameCatalogue *pCatalogue, int dTime)  | 34 |  |  |  |
+| struct UtilsText *Farm_displayGrid(struct Farm *this, int dTime)  | 35 |  |  |  |
+| FIX THIS: void Farm_UI(
+ | 36 |  |  |  |
+| FIX THIS: void Farm_IO(
+ | 37 |  |  |  |
+| FIX THIS: void Farm_footer(
+ | 38 |  |  |  |
+
+| game.obj.player.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| struct Player *Player_new()  | 1 |  |  |  |
+| void Player_init(struct Player *this, int dGold, int dEnergy, int dDefaultEnergy, struct GameCatalogue *pCatalogue)  | 2 |  |  |  |
+| struct Player *Player_create(int dGold, int dEnergy, int dDefaultEnergy, struct GameCatalogue *pCatalogue)  | 3 |  |  |  |
+| void Player_kill(struct Player *this)  | 4 |  |  |  |
+| void Player_setName(struct Player *this, char *sName)  | 5 |  |  |  |
+| char *Player_getName(struct Player *this)  | 6 |  |  |  |
+| int Player_getTime(struct Player *this)  | 7 |  |  |  |
+| int Player_getGold(struct Player *this)  | 8 |  |  |  |
+| int Player_getEnergy(struct Player *this)  | 9 |  |  |  |
+| struct Stock *Player_getSeedStock(struct Player *this, enum ProductType eProductType)  | 10 |  |  |  |
+| void Player_updateSeedStock(struct Player *this, enum ProductType eProductType, int dChangeAmount)  | 11 |  |  |  |
+| struct Stock *Player_getCropStock(struct Player *this, enum ProductType eProductType)  | 12 |  |  |  |
+| void Player_updateCropStock(struct Player *this, enum ProductType eProductType, int dChangeAmount)  | 13 |  |  |  |
+| int Player_updateGold(struct Player *this, int dGoldChange)  | 14 |  |  |  |
+| int Player_updateEnergy(struct Player *this, int dEnergyChange)  | 15 |  |  |  |
+| int Player_isDead(struct Player *this)  | 16 |  |  |  |
+| int Player_isStarving(struct Player *this)  | 17 |  |  |  |
+| void Player_goHome(struct Player *this)  | 18 |  |  |  |
+| int Player_tillPlots(struct Player *this, int dPlots)  | 19 |  |  |  |
+| int Player_sowSeeds(struct Player *this, enum ProductType eProductType, int dSeeds)  | 20 |  |  |  |
+| int Player_waterCrops(struct Player *this, int dCrops)  | 21 |  |  |  |
+| int Player_harvestCrops(struct Player *this, int dCrops)  | 22 |  |  |  |
+| void Player_harvestACrop(struct Player *this, enum ProductType eProductType)  | 23 |  |  |  |
+| int Player_buyCrop(struct Player *this, enum ProductType eProductType, int dAmount, int dCost)  | 24 |  |  |  |
+| int Player_sellCrop(struct Player *this, enum ProductType eProductType, int dAmount, int dCost)  | 25 |  |  |  |
+
+| game.obj.shop.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| struct Shop *Shop_new()  | 1 |  |  |  |
+| void Shop_init(struct Shop *this, struct GameCatalogue *pCatalogue)  | 2 |  |  |  |
+| struct Shop *Shop_create(struct GameCatalogue *pCatalogue)  | 3 |  |  |  |
+| void Shop_kill(struct Shop *this)  | 4 |  |  |  |
+| enum ShopAction Shop_getCurrentAction(struct Shop *this)  | 5 |  |  |  |
+| void Shop_setCurrentAction(struct Shop *this, enum ShopAction eShopAction)  | 6 |  |  |  |
+| enum ProductType Shop_getCurrentCrop(struct Shop *this)  | 7 |  |  |  |
+| void Shop_setCurrentCrop(struct Shop *this, enum ProductType eProductType)  | 8 |  |  |  |
+| int Shop_getCurrentBuyCost(struct Shop *this, int dAmount)  | 9 |  |  |  |
+| int Shop_buyCurrentProduct(struct Shop *this, int dAmount)  | 10 |  |  |  |
+| int Shop_getCurrentSellCost(struct Shop *this, int dAmount)  | 11 |  |  |  |
+| void Shop_sellCurrentProduct(struct Shop *this, int dAmount)  | 12 |  |  |  |
+| FIX THIS: void Shop_UI(
+ | 13 |  |  |  |
+| FIX THIS: void Shop_IO(
+ | 14 |  |  |  |
+| FIX THIS: void Shop_footer(
+ | 15 |  |  |  |
+
+| utils.io.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| void UtilsIO_init(struct UtilsIO *this)  | 1 |  |  |  |
+| int UtilsIO_getWidth()  | 2 |  |  |  |
+| int UtilsIO_getHeight()  | 3 |  |  |  |
+| int UtilsIO_setSize(int dWidth, int dHeight)  | 4 |  |  |  |
+| void UtilsIO_clear()  | 5 |  |  |  |
+| char UtilsIO_readChar()  | 6 |  |  |  |
+| void UtilsIO_exit(struct UtilsIO *this)  | 7 |  |  |  |
+| void UtilsIO_init(struct UtilsIO *this)  | 8 |  |  |  |
+| int UtilsIO_getWidth()  | 9 |  |  |  |
+| int UtilsIO_getHeight()  | 10 |  |  |  |
+| int UtilsIO_setSize(int dWidth, int dHeight)  | 11 |  |  |  |
+| void UtilsIO_clear()  | 12 |  |  |  |
+| char UtilsIO_readChar()  | 13 |  |  |  |
+| void UtilsIO_exit(struct UtilsIO *this)  | 14 |  |  |  |
+| int UtilsIO_isReturn(char cChar)  | 15 |  |  |  |
+| int UtilsIO_isBackspace(char cChar)  | 16 |  |  |  |
+| char *UtilsIO_newInputStr()  | 17 |  |  |  |
+| void UtilsIO_killInputStr(char *sOutput)  | 18 |  |  |  |
+| char UtilsIO_inputChar()  | 19 |  |  |  |
+| char *UtilsIO_inputStr()  | 20 |  |  |  |
+| int UtilsIO_inputStrOut(char *sOutput)  | 21 |  |  |  |
+
+| utils.key.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| char UtilsKey_uppercaseChar()  | 1 |  |  |  |
+| FIX THIS: void UtilsKey_inputPoll(
+ | 2 |  |  |  |
+| FIX THIS: void UtilsKey_inputString(
+ | 3 |  |  |  |
+| int UtilsKey_isNum(char cInput)  | 4 |  |  |  |
+| int UtilsKey_isAlpha(char cInput)  | 5 |  |  |  |
+| int UtilsKey_isReturn(char cInput, char *sDummy)  | 6 |  |  |  |
+| int UtilsKey_isBackspace(char cInput, char *sDummy)  | 7 |  |  |  |
+| int UtilsKey_isNotReturn(char cInput, char *sDummy)  | 8 |  |  |  |
+| int UtilsKey_isNot(char cInput, char *sReference)  | 9 |  |  |  |
+| int UtilsKey_dummy(char cInput, char *sReference)  | 10 |  |  |  |
+| int UtilsKey_stringToInt(char *sInt)  | 11 |  |  |  |
+
+| utils.selector.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| struct UtilsSelector *UtilsSelector_new()  | 1 |  |  |  |
+| void UtilsSelector_init(struct UtilsSelector *this, int bIsLooped, char *sDefaultWrapper, char *sSelectedWrapper, char *sDisabledWrapper)  | 2 |  |  |  |
+| struct UtilsSelector *UtilsSelector_create(int bIsLooped, char *sDefaultWrapper, char *sSelectedWrapper, char *sDisabledWrapper)  | 3 |  |  |  |
+| void UtilsSelector_kill(struct UtilsSelector *this)  | 4 |  |  |  |
+| void UtilsSelector_addOption(struct UtilsSelector *this, char *sOption, int dOptionValue)  | 5 |  |  |  |
+| char *UtilsSelector_getOption(struct UtilsSelector *this, int dIndex)  | 6 |  |  |  |
+| void UtilsSelector_setOptionAvailability(struct UtilsSelector *this, int dIndex, int bAvailability)  | 7 |  |  |  |
+| void UtilsSelector_setAllAvailability(struct UtilsSelector *this, int bAvailability)  | 8 |  |  |  |
+| void UtilsSelector_setFirstAvailable(struct UtilsSelector *this)  | 9 |  |  |  |
+| int UtilsSelector_getOptionValue(struct UtilsSelector *this, int dIndex)  | 10 |  |  |  |
+| int UtilsSelector_getAvailableCount(struct UtilsSelector *this)  | 11 |  |  |  |
+| int UtilsSelector_getCurrentIndex(struct UtilsSelector *this)  | 12 |  |  |  |
+| char *UtilsSelector_getCurrentOption(struct UtilsSelector *this)  | 13 |  |  |  |
+| int UtilsSelector_getCurrentValue(struct UtilsSelector *this)  | 14 |  |  |  |
+| char *UtilsSelector_getOptionFormatted(struct UtilsSelector *this, int dIndex)  | 15 |  |  |  |
+| int UtilsSelector_getLength(struct UtilsSelector *this)  | 16 |  |  |  |
+| void UtilsSelector_increment(struct UtilsSelector *this)  | 17 |  |  |  |
+| void UtilsSelector_decrement(struct UtilsSelector *this)  | 18 |  |  |  |
+
+| utils.text.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| struct UtilsText *UtilsText_new()  | 1 |  |  |  |
+| void UtilsText_init(struct UtilsText *this)  | 2 |  |  |  |
+| struct UtilsText *UtilsText_create()  | 3 |  |  |  |
+| void UtilsText_kill(struct UtilsText *this)  | 4 |  |  |  |
+| void UtilsText_addPatternLines(struct UtilsText *this, int dLines, char *sPattern)  | 5 |  |  |  |
+| void UtilsText_addNewLines(struct UtilsText *this, int dLines)  | 6 |  |  |  |
+| void UtilsText_addText(struct UtilsText *this, char *sText)  | 7 |  |  |  |
+| void UtilsText_addBlock(struct UtilsText *this, char **sTextArray, int dLines)  | 8 |  |  |  |
+| void UtilsText_changeText(struct UtilsText *this, int dIndex, char *sText)  | 9 |  |  |  |
+| char **UtilsText_getText(struct UtilsText *this)  | 10 |  |  |  |
+| char *UtilsText_getTextLine(struct UtilsText *this, int dIndex)  | 11 |  |  |  |
+| int UtilsText_getLines(struct UtilsText *this)  | 12 |  |  |  |
+| void UtilsText_mergeText(struct UtilsText *this, struct UtilsText *pSource)  | 13 |  |  |  |
+| char *UtilsText_paddedText(char *sText, char *sPadText, enum UtilsText_Alignment eAlignment)  | 14 |  |  |  |
+| char *UtilsText_centeredText(char *sText)  | 15 |  |  |  |
+
+| utils.ui.h | # | Test Description | Sample Input | Expected Result | Actual Result | Pass / Fail |
+| --- | --- | --- | --- | --- |
+| struct UtilsText *UtilsUI_centerX(struct UtilsText *pUtilsText)  | 1 |  |  |  |
+| struct UtilsText *UtilsUI_centerXY(struct UtilsText *pUtilsText)  | 2 |  |  |  |
+| struct UtilsText *UtilsUI_header(struct UtilsText *pUtilsText, struct UtilsText *pHeader)  | 3 |  |  |  |
+| struct UtilsText *UtilsUI_footer(struct UtilsText *pUtilsText, struct UtilsText *pFooter)  | 4 |  |  |  |
+| void UtilsUI_print(struct UtilsText *pUtilsText)  | 5 |  |  |  |
+| char *UtilsUI_toUpper(char *sString)  | 6 |  |  |  |
+| char *UtilsUI_createBuffer()  | 7 |  |  |  |
+
