@@ -178,7 +178,7 @@ int main(int argc, char *argv[]) {
     // Run the game itself
     char execCommand[128];
     #ifdef _WIN32
-      sprintf(execCommand, "build\\game.win.exe %s", args);
+      sprintf(execCommand, "%%windir%%\\SysNative\\conhost.exe build\\game.win.exe %s", args);
       system(execCommand);
     #else
       sprintf(execCommand, "./build/game.unix.o %s", args);
