@@ -25,7 +25,7 @@ Despite the challenges posed by the restrictions of the C language, a reasonably
 
 To quote some of the comments of the author within the `main.c` file:
 
->  **QUOTE:** Anyhow, I present to you this amalgamation of C files which have condensed themselves over drops of uninterrupted keystrokes uttered throughout the wee hours of the morning. There is no greater high than writing a novel's worth of C lines that *seem* to work as intended... Currently more than 7500 lines... that's more lines than I have under my eyes. Given that this took a little under two weeks to develop, that's more than 500 lines a day, on average.
+>  **QUOTE:** Anyhow, I present to you this amalgamation of C files which have condensed themselves over drops of uninterrupted keystrokes uttered throughout the wee hours of the morning. There is no greater high than writing a novel's worth of C lines that *seem* to work as intended... Currently more than 7500 lines... that's more lines than I have under my eyes. Given that this took a little under two weeks to develop, that's more than 500 lines a day, on average. 
 
 <br>
 <div style="text-align: center; overflow-x: hidden;">
