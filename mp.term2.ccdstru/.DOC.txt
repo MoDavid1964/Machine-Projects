@@ -5,6 +5,7 @@ why i shouldnt use single bit structures    [https://stackoverflow.com/questions
 conhost.exe                                 [https://stackoverflow.com/questions/75991731/programmatically-start-process-in-old-windows-terminal]
 damnn its a 32 bit application              [https://stackoverflow.com/questions/76170073/could-not-find-file-c-windows-system32-conhost-exe]
 windows 11 sizing does not yet exist        [https://superuser.com/questions/1778402/dynamically-change-terminal-window-size-on-win11]
+snprintf in C                               [https://stackoverflow.com/questions/7315936/which-of-sprintf-snprintf-is-more-secure]
 
 Draft explanation:
 

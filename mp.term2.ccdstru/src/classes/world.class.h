@@ -11,14 +11,6 @@
 #define WORLD_MAX_SIZE 8
 
 /**
- * //
- * ////
- * //////    World class infrastructure
- * ////////
- * ////////// 
-*/
-
-/**
  * The world class describes a grid of bits which can helps us store information.
  * Note that the bits are stored in reverse; in other words:
  *    (1) The cell (1, 1) corresponds to the UPPER RIGHT bit
@@ -30,6 +22,27 @@ typedef struct World World;
 struct World {
   uint8_t bits[WORLD_MAX_SIZE];
 };
+
+// Constructors and destructors
+World *World_new();
+World *World_init(World *this);
+World *World_create();
+void *World_kill();
+
+// Getters and setters
+int World_getBit(World *this, short x, short y);
+void World_setBit(World *this, short x, short y, int n);
+
+// Operations
+int World_contains(World *pWorldRef, World *pWorldSub);
+
+/**
+ * //
+ * ////
+ * //////    World infrastructure
+ * ////////
+ * ////////// 
+*/
 
 /**
  * Creates a new instance of the world class.
@@ -85,7 +98,7 @@ void World_kill(World *this) {
 /**
  * //
  * ////
- * //////    World class getters and setters
+ * //////    World getters and setters
  * ////////
  * ////////// 
 */
@@ -118,7 +131,7 @@ void World_setBit(World *this, short x, short y, int n) {
 /**
  * //
  * ////
- * //////    World class operations
+ * //////    World operations
  * ////////
  * ////////// 
 */

@@ -9,14 +9,6 @@
 #include <stdlib.h>
 
 /**
- * //
- * ////
- * //////    Player class infrastructure
- * ////////
- * ////////// 
-*/
-
-/**
  * 
  * @class
 */
@@ -25,6 +17,26 @@ typedef struct Player Player;
 struct Player {
   World *pWorld;
 };
+
+// Constructors and destructors
+Player *Player_new();
+Player *Player_init(Player *this);
+Player *Player_create();
+void Player_kill(Player *this);
+
+// Getters and setters
+World *Player_getWorld(Player *this);
+
+// Operations
+void Player_addPoint(Player *this, int x, int y);
+
+/**
+ * //
+ * ////
+ * //////    Player constructors and destructors
+ * ////////
+ * ////////// 
+*/
 
 /**
  * Creates a new instance of the player class.
@@ -46,7 +58,6 @@ Player *Player_new() {
  * 
 */
 Player *Player_init(Player *this) {
-
   this->pWorld = World_create();
 
   return this;
@@ -78,7 +89,7 @@ void Player_kill(Player *this) {
 /**
  * //
  * ////
- * //////    Player class getters and setters
+ * //////    Player getters and setters
  * ////////
  * ////////// 
 */
@@ -96,7 +107,7 @@ World *Player_getWorld(Player *this) {
 /**
  * //
  * ////
- * //////    Player class operations
+ * //////    Player operations
  * ////////
  * ////////// 
 */

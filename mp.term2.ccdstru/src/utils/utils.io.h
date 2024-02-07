@@ -46,13 +46,25 @@ struct IO {
   
 };
 
+// Object init and exit
+IO *IO_init(IO *this);
+void IO_exit(IO *this);
+
+// Operations
+int IO_getWidth();
+int IO_getHeight();
+int IO_setSize();
+void IO_clear();
+char IO_readChar();
+
 /**
  * This only exists here because I need to set some stuff up for Unix-based OS's.
  * 
  * @param   { IO * }  this  The IO object to initialize.
+ * @return  { IO * }        The initialized IO object.
 */
-void IO_init(IO *this) {
-
+IO *IO_init(IO *this) {
+  return this;
 }
 
 
@@ -206,18 +218,32 @@ void IO_exit(IO *this) {
  * A struct to hold some variables so we don't pollute the global namespace.
  * Stores the original settings of the terminal so we can revert them back after the program exuts.
 */
+typedef struct IO IO;
+
 IO {
   struct termios defaultSettings;
   struct termios overrideSettings;
 };
+
+// Object init and exit
+IO *IO_init(IO *this);
+void IO_exit(IO *this);
+
+// Operations
+int IO_getWidth();
+int IO_getHeight();
+int IO_setSize();
+void IO_clear();
+char IO_readChar();
 
 /**
  * Sets up some stuff for IO handling.
  * Overrides default terminal settings so I can replicate getch behaviour on Unix-based OS's.
  * 
  * @param   { IO * }  this  The IO object to initialize.
+ * @return  { IO * }        The initialized instance.
 */
-void IO_init(IO *this) {
+IO *IO_init(IO *this) {
 
   // Save the default settings of the terminal before overriding them
   // This function is from termios.h
@@ -233,6 +259,8 @@ void IO_init(IO *this) {
   this->overrideSettings.c_lflag &= ~(ICANON | ECHO);
 
   tcsetattr(0, TCSANOW, &this->overrideSettings);
+
+  return this;
 }
 
 /**

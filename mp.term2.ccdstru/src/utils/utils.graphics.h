@@ -7,6 +7,10 @@
 
 #include <stdio.h>
 
+// Color functions
+void Graphics_setBackground(int color);
+void Graphics_setBackground(int color);
+
 /**
  * //
  * ////

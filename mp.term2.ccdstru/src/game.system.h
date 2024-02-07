@@ -53,8 +53,9 @@ struct System {
  * Initializes the system variables
  * 
  * @param   { System * }  this  The system to be initialized.
+ * @return  { System * }        The initialized system.
 */
-void System_init(System *this) {
+System *System_init(System *this) {
 
   // Defining some game constants
   this->WORLD_SIZE = GAME_WORLD_SIZE;
@@ -106,6 +107,8 @@ void System_init(System *this) {
   World_setBit(this->WIN_CONFIGS[3], 4, 2, 1);  // (5, 3)
   World_setBit(this->WIN_CONFIGS[3], 5, 0, 1);  // (6, 1)
   World_setBit(this->WIN_CONFIGS[3], 5, 2, 1);  // (6, 3)
+
+  return this;
 }
 
 /**
