@@ -1,14 +1,19 @@
 /**
- * A library for the text buffer class (which we can then render to the screen).
-*/
+ * @ Author: Mo David
+ * @ Create Time: 2024-02-07 12:20:45
+ * @ Modified time: 2024-02-09 01:27:43
+ * @ Description:
+ *    Defines the buffer class, which we use to store text strings.
+ *    The class uses a linked list to store contiguous strings, as this allows faster insertion and deletion.
+ */
 
-#ifndef UTILS_BUFFER
-#define UTILS_BUFFER
+#ifndef UTILS_BUFFER_
+#define UTILS_BUFFER_
 
 #include <stdio.h>
 #include <stdlib.h>
 
-// Maximum length of a buffer
+// Maximum length of a buffer 
 // Includes characters not rendered to the screen, such as:
 //    (1) ANSI Escape Sequences
 //    (2) The null byte
@@ -30,19 +35,31 @@ struct Buffer {
   Buffer *pNext;  // A reference to an adjacent node
 };
 
-// Constructors and destructors
+/**
+ * Constructors and destructors
+*/
 Buffer *Buffer_new();
+
 Buffer *Buffer_init(Buffer *this, int dRenderWidth);
+
 Buffer *Buffer_create(int dRenderWidth);
+
 void Buffer_kill(Buffer *this);
 
-// Getters and setters
+/**
+ * Getters and setters
+*/
 char *Buffer_getText(Buffer *this);
 
-// Operations
+/**
+ * Operations
+*/
 int Buffer_updateRenderWidth(Buffer *this);
+
 void Buffer_clearText(Buffer *this);
+
 void Buffer_newText(Buffer *this, char *sNewText);
+
 void Buffer_addText(Buffer *this, char *sAddText);
 
 /**

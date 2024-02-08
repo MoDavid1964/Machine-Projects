@@ -1,9 +1,13 @@
 /**
- * This file defines an instantiable class that stores grid information (we call this the world).
-*/
+ * @ Author: Mo David
+ * @ Create Time: 2024-02-07 02:12:46
+ * @ Modified time: 2024-02-09 01:30:25
+ * @ Description:
+ *    This file defines an instantiable class that stores grid information (we call this the world).
+ */
 
-#ifndef GAME_WORLD_CLASS
-#define GAME_WORLD_CLASS
+#ifndef GAME_WORLD_CLASS_
+#define GAME_WORLD_CLASS_
 
 #include <stdint.h>
 #include <stdlib.h>

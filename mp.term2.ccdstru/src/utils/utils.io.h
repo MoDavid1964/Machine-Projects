@@ -1,10 +1,13 @@
 /**
- * A file containing some useful helper functions for low-level input and output operations
- * Although utils.ui.h and utils.key.h also deal with input and output, those files primarily deal with IO constructs created for convenience, and not for system differences.
-*/
+ * @ Author: Mo David
+ * @ Create Time: 2024-02-07 02:12:46
+ * @ Modified time: 2024-02-09 01:33:59
+ * @ Description:
+ *    A file containing some useful helper functions for low-level input and output operations.
+ */
 
-#ifndef UTILS_IO
-#define UTILS_IO
+#ifndef UTILS_IO_
+#define UTILS_IO_
 
 // Some other important header files
 #include <stdio.h>
@@ -204,7 +207,7 @@ void IO_exit(IO *this) {
 */
 typedef struct IO IO;
 
-IO {
+struct IO {
   struct termios defaultSettings;
   struct termios overrideSettings;
 };

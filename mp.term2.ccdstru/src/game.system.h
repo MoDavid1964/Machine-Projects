@@ -1,6 +1,11 @@
 /**
- * This file stores the configuration of the game and a number of global variables.
-*/
+ * @ Author: Mo David
+ * @ Create Time: 2024-02-07 02:12:46
+ * @ Modified time: 2024-02-09 01:31:31
+ * @ Description:
+ *    Stores the system variables and the system logic.
+ *    Implements the specifications of the machine project.
+ */
 
 #ifndef GAME_SYSTEM
 #define GAME_SYSTEM

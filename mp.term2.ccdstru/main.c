@@ -1,6 +1,11 @@
 /**
- * HELLO WORLD
-*/
+ * @ Author: Mo David
+ * @ Create Time: 2024-02-06 15:01:38
+ * @ Modified time: 2024-02-09 01:32:28
+ * @ Description:
+ *    The main file builds the actual program itself
+ *    It also configures the execution environment for the program.
+ */
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -25,10 +30,11 @@ int main(int argc, char *argv[]) {
     printf(" -  Compile success!\n(2) Running the program...\n");
     system("%windir%\\SysNative\\conhost.exe build\\game.win.exe");
     printf(" -  Program terminated."); 
+    
   // Unix environments
   #else
     printf("(1) Compiling the program...\n");
-    system("gcc -std=c99 -Wall ./src/game.c -o ./build/game.unix.o 2> build\\log.unix.txt");
+    system("gcc -std=c99 -Wall ./src/game.c -o ./build/game.unix.o 2> ./build/log.unix.txt");
     printf(" -  Compile success!\n(2) Running the program...\n");
     system("./build/game.unix.o");
     printf(" -  Program terminated."); 

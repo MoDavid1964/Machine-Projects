@@ -1,9 +1,14 @@
 /**
- * A library for rendering graphics onto the screen.
-*/
+ * @ Author: Mo David
+ * @ Create Time: 2024-02-07 02:12:46
+ * @ Modified time: 2024-02-09 01:33:34
+ * @ Description:
+ *    A library that implements graphics-related functionality.
+ *    Allows coloring the output.
+ */
 
-#ifndef UTILS_GRAPHICS
-#define UTILS_GRAPHICS
+#ifndef UTILS_GRAPHICS_
+#define UTILS_GRAPHICS_
 
 #include <stdio.h>
 

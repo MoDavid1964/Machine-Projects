@@ -1,4 +1,5 @@
 Now I know C isn't object oriented, but I'm going to pretend it is.
+ALSO i know we usually compile header files through gcc main.c header.c -o main, but because i dont wanna do that in a long ass command (and i cant use make on Windows) im just gonna use pure.h files
 
 short vs short int                          [https://stackoverflow.com/questions/28319113/what-is-the-difference-between-short-int-and-short-in-c]
 why i shouldnt use single bit structures    [https://stackoverflow.com/questions/31310496/smallest-data-type-can-i-define-a-one-bit-variable]
@@ -8,6 +9,9 @@ windows 11 sizing does not yet exist        [https://superuser.com/questions/177
 snprintf in C                               [https://stackoverflow.com/questions/7315936/which-of-sprintf-snprintf-is-more-secure]
 calloc vs malloc                            [https://stackoverflow.com/questions/1538420/difference-between-malloc-and-calloc]
 no need to cast malloc return               [https://stackoverflow.com/questions/605845/should-i-cast-the-result-of-malloc]
+linker thingz                               [https://stackoverflow.com/questions/18548157/c-header-files-and-compilation-linking]
+HOLY SHT THIS IS AN AMAZING RESOURCE ON c   [https://gribblelab.org/teaching/CBootCamp/12_Compiling_linking_Makefile_header_files.html]
+  [header files and sht]
 
 Draft explanation:
 

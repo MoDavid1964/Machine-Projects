@@ -1,9 +1,13 @@
 /**
- * This file defines an instantiable class that player information.
-*/
+ * @ Author: Mo David
+ * @ Create Time: 2024-02-07 02:12:46
+ * @ Modified time: 2024-02-09 01:29:07
+ * @ Description:
+ *    Represents the players in the game and their data.
+ */
 
-#ifndef GAME_PLAYER_CLASS
-#define GAME_PLAYER_CLASS
+#ifndef GAME_PLAYER_CLASS_
+#define GAME_PLAYER_CLASS_
 
 #include "world.class.h"
 #include <stdlib.h>

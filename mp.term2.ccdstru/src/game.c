@@ -1,7 +1,15 @@
+/**
+ * @ Author: Mo David
+ * @ Create Time: 2024-02-07 02:12:46
+ * @ Modified time: 2024-02-09 01:30:59
+ * @ Description:
+ *    Contains the overarching logic of the game.
+ */
+
 #include "game.system.h"
-#include "utils/utils.io.h"
-#include "utils/utils.buffer.h"
-#include "utils/utils.graphics.h"
+#include "./utils/utils.io.h"
+#include "./utils/utils.buffer.h"
+#include "./utils/utils.graphics.h"
 
 #include <stdio.h>
 
