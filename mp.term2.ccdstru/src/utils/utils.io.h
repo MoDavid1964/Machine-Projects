@@ -137,16 +137,6 @@ int IO_setSize(int dWidth, int dHeight) {
     SMALL_RECT const newWindowSize = { 0, 0, dWidth - 1, dHeight - 1 };
     SetConsoleWindowInfo(GetStdHandle(STD_OUTPUT_HANDLE), TRUE, &newWindowSize);
 
-    // This is another thing I found elsewhere which speeds printf up
-    // Console output by default is buffered per line, which means everytime we counter a \n things slow down
-    // In other words, in only prints in chunks of lines
-    // In order to circumvent that hindrance, we set the buffer size ourselves
-    
-    // _IOFBF means data is written to the output stream once the buffer is full
-    // _IOLBF (the default) writes data once a newline is encountered
-    // We don't need to do this for Unix anymore cuz it's already quite fast for some reason.
-    setvbuf(stdout, NULL, _IOFBF, dWidth);
-
     // The screen size was changed
     // Note that the unix version of the function returns 0 since it does nothing
     return 1;

@@ -5,3 +5,15 @@ git commit -m "Created buffer class; function forward declarations."
   // _IOLBF (the default) writes data once a newline is encountered
   // char cBufferArray[dWidth];
   setvbuf(stdout, NULL, _IOFBF, consoleScreenBufferInfo.srWindow.Right - consoleScreenBufferInfo.srWindow.Left + 1);
+
+THIS IS INT setSize()
+
+ // This is another thing I found elsewhere which speeds printf up
+    // Console output by default is buffered per line, which means everytime we counter a \n things slow down
+    // In other words, in only prints in chunks of lines
+    // In order to circumvent that hindrance, we set the buffer size ourselves
+    
+    // _IOFBF means data is written to the output stream once the buffer is full
+    // _IOLBF (the default) writes data once a newline is encountered
+    // We don't need to do this for Unix anymore cuz it's already quite fast for some reason.
+    setvbuf(stdout, NULL, _IOFBF, dWidth);
