@@ -1,4 +1,5 @@
-git commit -m "Created buffer class; function forward declarations."
+uhh make sure to set terminal to utf8 or smthh
+
 
 // While we're at it, let's change the buffering behaviour in case the console was resized
   // _IOFBF means data is written to the output stream once the buffer is full
