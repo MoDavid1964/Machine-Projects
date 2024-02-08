@@ -1,7 +1,7 @@
 /**
  * @ Author: Mo David
  * @ Create Time: 2024-02-07 02:12:46
- * @ Modified time: 2024-02-09 01:30:59
+ * @ Modified time: 2024-02-09 02:03:30
  * @ Description:
  *    Contains the overarching logic of the game.
  */
@@ -22,10 +22,14 @@ int main() {
 
   IO_clear();
   IO_setSize(64, 16);
-  Graphics_setBackground(0xffffff);
-  Graphics_setForeground(0x212121);
 
-  Buffer_newText(buffer, "Hello world \x1b[1;31m Hello world! What if we make this too long?aaaabbbbccc");
+  Buffer_newText(buffer, "Hello world1");
+  Buffer_addText(buffer, Graphics_getCodeBG(0xffffff));
+  Buffer_addText(buffer, Graphics_getCodeFG(0x212121));
+  Buffer_addText(buffer, "Hello world2");
+  Buffer_addText(buffer, Graphics_getCodeBG(0x123456));
+  Buffer_addText(buffer, Graphics_getCodeFG(0x654321));
+  Buffer_addText(buffer, "Hello world3");
 
   printf("%d\n", buffer->dWidth);
   printf("%s", buffer->sText);

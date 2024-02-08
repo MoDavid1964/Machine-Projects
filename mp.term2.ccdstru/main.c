@@ -1,7 +1,7 @@
 /**
  * @ Author: Mo David
  * @ Create Time: 2024-02-06 15:01:38
- * @ Modified time: 2024-02-09 01:32:28
+ * @ Modified time: 2024-02-09 01:41:06
  * @ Description:
  *    The main file builds the actual program itself
  *    It also configures the execution environment for the program.
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     //    The reason I have to specify conhost.exe to run the app is because Windows 11 (and other Windows 10 users)
     //    have begun using the Windows Terminal in lieu of the good ol' CMD. However, Windows Terminal currently does
     //    not support window resizing and so I was forced to find a workaround to this. Hence, we have here a manual
-    //    execution of conhost.exe (which, mind you, is actually what cmd.exe runs for most purposes).
+    //    execution of conhost.exe (which, mind you, is actually what cmd.exe uses as a terminal anyway).
     printf("(1) Compiling the program...\n");
     system("gcc -std=c99 -Wall src\\game.c -o build\\game.win.exe 2> build\\log.win.txt");
     printf(" -  Compile success!\n(2) Running the program...\n");

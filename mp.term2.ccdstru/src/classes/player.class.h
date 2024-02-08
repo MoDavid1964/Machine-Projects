@@ -1,7 +1,7 @@
 /**
  * @ Author: Mo David
  * @ Create Time: 2024-02-07 02:12:46
- * @ Modified time: 2024-02-09 01:29:07
+ * @ Modified time: 2024-02-09 01:43:09
  * @ Description:
  *    Represents the players in the game and their data.
  */
@@ -22,16 +22,25 @@ struct Player {
   World *pWorld;
 };
 
-// Constructors and destructors
+/**
+ * Constructors and destructors 
+*/
 Player *Player_new();
+
 Player *Player_init(Player *this);
+
 Player *Player_create();
+
 void Player_kill(Player *this);
 
-// Getters and setters
+/**
+ * Getters and setters
+*/
 World *Player_getWorld(Player *this);
 
-// Operations
+/**
+ * Operations
+*/
 void Player_addPoint(Player *this, int x, int y);
 
 /**

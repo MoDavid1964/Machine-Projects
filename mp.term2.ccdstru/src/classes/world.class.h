@@ -1,7 +1,7 @@
 /**
  * @ Author: Mo David
  * @ Create Time: 2024-02-07 02:12:46
- * @ Modified time: 2024-02-09 01:30:25
+ * @ Modified time: 2024-02-09 01:44:13
  * @ Description:
  *    This file defines an instantiable class that stores grid information (we call this the world).
  */
@@ -27,17 +27,27 @@ struct World {
   uint8_t bits[WORLD_MAX_SIZE];
 };
 
-// Constructors and destructors
+/**
+ * Constructors and destructors
+*/
 World *World_new();
+
 World *World_init(World *this);
+
 World *World_create();
+
 void World_kill(World *this);
 
-// Getters and setters
+/**
+ * Getters and setters
+*/
 int World_getBit(World *this, short x, short y);
+
 void World_setBit(World *this, short x, short y, int n);
 
-// Operations
+/**
+ * Operators
+*/
 int World_contains(World *pWorldRef, World *pWorldSub);
 
 /**

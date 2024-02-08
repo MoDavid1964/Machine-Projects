@@ -1,7 +1,7 @@
 /**
  * @ Author: Mo David
  * @ Create Time: 2024-02-07 02:12:46
- * @ Modified time: 2024-02-09 01:33:59
+ * @ Modified time: 2024-02-09 01:48:09
  * @ Description:
  *    A file containing some useful helper functions for low-level input and output operations.
  */
@@ -49,15 +49,24 @@ struct IO {
   
 };
 
-// Object init and exit
+/**
+ * Init and exit
+*/
 IO *IO_init(IO *this);
+
 void IO_exit(IO *this);
 
-// Operations
+/**
+ * Operators
+*/
 int IO_getWidth();
+
 int IO_getHeight();
-int IO_setSize();
+
+int IO_setSize(int dWidth, int dHeight);
+
 void IO_clear();
+
 char IO_readChar();
 
 /**
@@ -212,15 +221,24 @@ struct IO {
   struct termios overrideSettings;
 };
 
-// Object init and exit
+/**
+ * Init and exit
+*/
 IO *IO_init(IO *this);
+
 void IO_exit(IO *this);
 
-// Operations
+/**
+ * Operators
+*/
 int IO_getWidth();
+
 int IO_getHeight();
+
 int IO_setSize(int dWidth, int dHeight);
+
 void IO_clear();
+
 char IO_readChar();
 
 /**

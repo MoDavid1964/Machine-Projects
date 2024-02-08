@@ -1,7 +1,7 @@
 /**
  * @ Author: Mo David
  * @ Create Time: 2024-02-07 12:20:45
- * @ Modified time: 2024-02-09 01:27:43
+ * @ Modified time: 2024-02-09 01:58:47
  * @ Description:
  *    Defines the buffer class, which we use to store text strings.
  *    The class uses a linked list to store contiguous strings, as this allows faster insertion and deletion.
