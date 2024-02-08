@@ -38,10 +38,11 @@ void Buffer_kill(Buffer *this);
 
 // Getters and setters
 char *Buffer_getText(Buffer *this);
-void Buffer_setText(Buffer *this, char *sNewText);
 
 // Operations
+int Buffer_updateRenderWidth(Buffer *this);
 void Buffer_clearText(Buffer *this);
+void Buffer_newText(Buffer *this, char *sNewText);
 void Buffer_addText(Buffer *this, char *sAddText);
 
 /**
@@ -120,23 +121,76 @@ char *Buffer_getText(Buffer *this) {
 }
 
 /**
- * Replaces the contents of the string in the buffer.
- * 
- * @param   { Buffer * }  this      The buffer instance to be modified.
- * @param   { char * }    sNewText  The new string to be copied.
-*/
-void Buffer_setText(Buffer *this, char *sNewText) {
-  Buffer_clearText(this);
-  snprintf(this->sText, BUFFER_MAX_LENGTH, "%s", sNewText);
-}
-
-/**
  * //
  * ////
  * //////    Buffer operations
  * ////////
  * ////////// 
 */
+
+/**
+ * Computes the render length of the string, exluding ANSI escape sequences.
+ * 
+ * @param   { Buffer * }  this  The buffer instance to be modified.
+ * @return  { int }             The newly computed render length of the stored string.
+*/
+int Buffer_updateRenderWidth(Buffer *this) {
+
+  // Reference for starting and ending ANSI escape sequences
+  // Note that the termination character ("m") is the one used for color escape strings.
+  // Color strings will be the only escape sequences we will use within the buffers.
+  char sFront[2] = "\x1b";
+  char sBack[2] = "m";
+
+  // Some more vars
+  int i = 0, j = 0;
+  int dLen = strlen(this->sText);
+  int bEscaped = 0;
+
+  // Reset the width first
+  this->dWidth = 0;
+
+  do {
+
+    // Check if it's the end of an escape string
+    for(j = 0; j < strlen(sBack) && i + j < dLen; j++) {
+      if(this->sText[i + j] != sBack[j])
+        j = strlen(sBack) + 1;
+    }
+
+    // End of escape sequence
+    if(j == strlen(sBack) && bEscaped) {
+      bEscaped = 0;
+
+      // Makes sure the terminating sequence isnt included in length
+      this->dWidth--;
+    }
+
+    // Check if it's the start of an escape string
+    for(j = 0; j < strlen(sFront) && i + j < dLen; j++) {
+      if(this->sText[i + j] != sFront[j])
+        j = strlen(sFront) + 1;
+    }
+
+    // If it's escaped
+    if(j == strlen(sFront))
+      bEscaped = 1;
+
+    // Update width if it's not an escape string
+    if(!bEscaped)
+      this->dWidth++;
+
+    // If the render length is already maxxed out
+    // This also means that we cannot end the string with an ANSI escape sequence
+    // If ever we do, the sequence will essentially be erased.
+    if(this->dWidth > this->dRenderWidth)
+      this->sText[i] = 0;
+
+  } while(this->sText[++i] != 0);
+
+  // Return the new value
+  return this->dWidth;
+}
 
 /**
  * Clears the current contents of a buffer instance.
@@ -152,6 +206,20 @@ void Buffer_clearText(Buffer *this) {
 }
 
 /**
+ * Replaces the contents of the string in the buffer.
+ * 
+ * @param   { Buffer * }  this      The buffer instance to be modified.
+ * @param   { char * }    sNewText  The new string to be copied.
+*/
+void Buffer_newText(Buffer *this, char *sNewText) {
+  Buffer_clearText(this);
+  snprintf(this->sText, BUFFER_MAX_LENGTH, "%s", sNewText);
+  
+  // Recompute render width
+  Buffer_updateRenderWidth(this);
+}
+
+/**
  * Appends text to the end of the string stored by the buffer.
  * 
  * @param   { Buffer * }  this      The buffer instance to be modified.
@@ -159,6 +227,9 @@ void Buffer_clearText(Buffer *this) {
 */
 void Buffer_addText(Buffer *this, char *sAddText) {
   snprintf(this->sText, BUFFER_MAX_LENGTH, "%s%s", this->sText, sAddText);
+
+  // Recompute render width
+  Buffer_updateRenderWidth(this);
 }
 
 #endif
