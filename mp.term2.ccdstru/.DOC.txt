@@ -6,6 +6,8 @@ conhost.exe                                 [https://stackoverflow.com/questions
 damnn its a 32 bit application              [https://stackoverflow.com/questions/76170073/could-not-find-file-c-windows-system32-conhost-exe]
 windows 11 sizing does not yet exist        [https://superuser.com/questions/1778402/dynamically-change-terminal-window-size-on-win11]
 snprintf in C                               [https://stackoverflow.com/questions/7315936/which-of-sprintf-snprintf-is-more-secure]
+calloc vs malloc                            [https://stackoverflow.com/questions/1538420/difference-between-malloc-and-calloc]
+no need to cast malloc return               [https://stackoverflow.com/questions/605845/should-i-cast-the-result-of-malloc]
 
 Draft explanation:
 

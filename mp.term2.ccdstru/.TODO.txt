@@ -1,0 +1,7 @@
+git commit -m "Created buffer class; function forward declarations."
+
+// While we're at it, let's change the buffering behaviour in case the console was resized
+  // _IOFBF means data is written to the output stream once the buffer is full
+  // _IOLBF (the default) writes data once a newline is encountered
+  // char cBufferArray[dWidth];
+  setvbuf(stdout, NULL, _IOFBF, consoleScreenBufferInfo.srWindow.Right - consoleScreenBufferInfo.srWindow.Left + 1);

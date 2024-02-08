@@ -82,12 +82,6 @@ int IO_getWidth() {
   // Some library functions from windows.h that return the dimensions of the console
   GetConsoleScreenBufferInfo(GetStdHandle(STD_OUTPUT_HANDLE), &consoleScreenBufferInfo);
 
-  // While we're at it, let's change the buffering behaviour in case the console was resized
-  // _IOFBF means data is written to the output stream once the buffer is full
-  // _IOLBF (the default) writes data once a newline is encountered
-  // char cBufferArray[dWidth];
-  setvbuf(stdout, NULL, _IOFBF, consoleScreenBufferInfo.srWindow.Right - consoleScreenBufferInfo.srWindow.Left + 1);
-
   // Note the plus one is needed to get the inclusive value of the difference
   return consoleScreenBufferInfo.srWindow.Right - consoleScreenBufferInfo.srWindow.Left + 1;
 }
@@ -232,7 +226,7 @@ void IO_exit(IO *this);
 // Operations
 int IO_getWidth();
 int IO_getHeight();
-int IO_setSize();
+int IO_setSize(int dWidth, int dHeight);
 void IO_clear();
 char IO_readChar();
 

@@ -27,7 +27,7 @@ struct World {
 World *World_new();
 World *World_init(World *this);
 World *World_create();
-void *World_kill();
+void World_kill(World *this);
 
 // Getters and setters
 int World_getBit(World *this, short x, short y);
